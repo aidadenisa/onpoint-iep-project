@@ -21,7 +21,19 @@ Pin::Pin(int pin, int dir, int pull_up) {
 }
 
 int Pin::getValue(void) {
+
+    //read the value written in the pin
     return bcm2835_gpio_lev(this->pin_nr);
+
+}
+
+void Pin::setValue( unsigned char value ) {
+    if(this->direction == 0) {
+        //do not do anything if it is input
+    } else {
+        //write on a pin
+        bcm2835_gpio_write(this->pin_nr, value);
+    }
 }
 
 void Pin::changeDir(void) {

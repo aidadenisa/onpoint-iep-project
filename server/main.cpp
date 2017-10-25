@@ -25,25 +25,25 @@ int main(int argc, char **argv)
 {
     // If you call this, it will not actually access the GPIO
     // Use for testing
-//    bcm2835_set_debug(1);
+    bcm2835_set_debug(1);
 
     Pin * pin = new Pin(PIN);
 
     if (!bcm2835_init())
       return 1;
     // Set the pin to be an output
-    bcm2835_gpio_fsel(pin->getValue(), BCM2835_GPIO_FSEL_OUTP);
+    pin->changeDir();
     // Blink
     while (1)
     {
         // Turn it on
-        bcm2835_gpio_write(pin->getValue(), HIGH);
+        pin->setValue(HIGH);
 
         // wait a bit
         bcm2835_delay(500);
 
-        // turn it off
-        bcm2835_gpio_write(pin->getValue(), LOW);
+        // turn it off /////////
+        pin->setValue(LOW);
 
         // wait a bit
         bcm2835_delay(500);

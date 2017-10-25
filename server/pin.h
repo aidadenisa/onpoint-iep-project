@@ -7,9 +7,11 @@
 class Pin
 {
 public:
+    Pin(int pin);
     Pin(int pin, int dir, int pull_up);
     void set(int Option);
     int getValue(void);
+    void setValue( unsigned char value );
     void changeDir(void);
 
 private:
