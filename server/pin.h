@@ -13,6 +13,7 @@ public:
     int getValue(void);
     void setValue( unsigned char value );
     void changeDir(void);
+    int getPinNr();
 
 private:
     int pin_nr;

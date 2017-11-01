@@ -15,10 +15,12 @@ TEMPLATE = app
 SOURCES += main.cpp\
         mainwindow.cpp \
     bcm2835_stub.cpp \
-    pin.cpp
+    pin.cpp \
+    pwm.cpp
 
 HEADERS  += mainwindow.h \
     bcm2835.h \
-    pin.h
+    pin.h \
+    pwm.h
 
 FORMS    += mainwindow.ui

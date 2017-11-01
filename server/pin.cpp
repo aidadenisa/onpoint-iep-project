@@ -48,3 +48,7 @@ void Pin::changeDir(void) {
         bcm2835_gpio_fsel(this->pin_nr, BCM2835_GPIO_FSEL_INPT);
     }
 }
+
+int Pin::getPinNr() {
+    return this->pin_nr;
+}
