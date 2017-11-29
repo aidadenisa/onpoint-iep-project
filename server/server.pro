@@ -16,11 +16,15 @@ SOURCES += main.cpp\
         mainwindow.cpp \
     bcm2835_stub.cpp \
     pin.cpp \
-    pwm.cpp
+    pwm.cpp \
+    serial.cpp \
+    spi.cpp
 
 HEADERS  += mainwindow.h \
     bcm2835.h \
     pin.h \
-    pwm.h
+    pwm.h \
+    serial.h \
+    spi.h
 
 FORMS    += mainwindow.ui
